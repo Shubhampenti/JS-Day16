@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fakeStore = {
+    item1: { name: "Laptop", category: "Electronics", price: 1000 },
+    item2: { name: "Phone", category: "Electronics", price: 500 },
+    item3: { name: "Shirt", category: "Clothing", price: 20 },
+    item4: { name: "Shoes", category: "Clothing", price: 50 },
+    item5: { name: "Book", category: "Books", price: 15 },
+    item6: { name: "Tablet", category: "Electronics", price: 300 },
+    item7: { name: "Hat", category: "Clothing", price: 10 },
+    item8: { name: "Notebook", category: "Books", price: 5 }
+};
+
+const electronics = [];
+const clothing = [];
+const books = [];
+
+for (let i in fakeStore) {
+    switch (fakeStore[i].category) {
+        case "Electronics":
+            electronics.push(fakeStore[i]);
+            break;
+        case "Clothing":
+            clothing.push(fakeStore[i]);
+            break;
+        case "Books":
+            books.push(fakeStore[i]);
+            break;
+    }
+}
+
+console.log("Electronics:", electronics);
+console.log("Clothing:", clothing);
+console.log("Books:", books);
+
+    </script>
+</body>
+</html>
